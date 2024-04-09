@@ -1,0 +1,15 @@
+<!-- {{players|json}} -->
+<h1 class="display-1">Portsmouth Golf Centre</h1>
+<div *ngFor="let player of players" class="row">
+<div class="col-3 display-6">
+    {{player.name}}
+</div>
+<div class="col mt-3">   
+        
+            <button (click)="player.visibleResult = !player.visibleResult" type="button" class="btn btn-primary btn-sm">Results</button>
+            <div class="col mt-2">
+                <app-results *ngIf="player.visibleResult" [results]="player.result" [playerId]="player.id" ></app-results>
+            </div>
+</div>
+
+</div>
