@@ -1,10 +1,10 @@
 <!-- {{players|json}} -->
-<h1 class="display-1">Portsmouth Golf Centre</h1>
+<h1 class="display-3">Portsmouth Golf Centre</h1>
 <div *ngFor="let player of players" class="row">
-<div class="col-3 display-6">
+<div class="col-4 display-6">
     {{player.name}}
 </div>
-<div class="col mt-3">   
+<div class="col mt-3 text-md-center">   
         
             <button (click)="player.visibleResult = !player.visibleResult" type="button" class="btn btn-primary btn-sm">Results</button>
            

@@ -1,30 +1,30 @@
-<div class="row mb-1">
+<div class="row mb-1 d-none d-md-flex">
     <div class="col">golfTournament</div>
     <div *ngFor="let o of oszlopok" class="col">{{o}}</div>
     <div class="col">Actions</div>
 </div>
 
-<div class="row my-1">
-    <div class="col">
+<div class="row my-1 d-none d-md-flex">
+    <div class="col-12 col-md">
         <input [(ngModel)]="newRound.golfTournament" type="text" class="form-control">
     </div>
-    <div *ngFor="let o of oszlopok" class="col">       
+    <div *ngFor="let o of oszlopok" class="col-12 col-md">       
         <input [(ngModel)]="newRound[o]" type="number" class="form-control">
     </div>
-    <div class="col">
+    <div class="col-12 col-md">
         <button (click)="createRound()" type="button" class="btn btn-primary btn-sm">Save</button>
     </div>
 </div>
 
 
 <div *ngFor="let result of results" class="row my-1">
-    <div class="col">
+    <div class="col-12 col-md my-1 my-md-0">
         <input [(ngModel)]="result.golfTournament" type="text" class="form-control">
     </div>
-    <div *ngFor="let o of oszlopok" class="col">       
+    <div *ngFor="let o of oszlopok" class="col-12 col-md">       
         <input [(ngModel)]="result[o]" type="number" class="form-control">
     </div>
-    <div class="col">
+    <div class="col-12 col-md">
         <button (click)="updateRound(result)" type="button" class="btn btn-primary btn-sm">Save</button>
         <button (click)="deleteRound(result)" type="button" class="btn btn-primary btn-sm">Del</button>
     </div>
