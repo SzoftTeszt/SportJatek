@@ -1,10 +1,10 @@
-<div class="row">
+<div class="row mb-1">
     <div class="col">golfTournament</div>
     <div *ngFor="let o of oszlopok" class="col">{{o}}</div>
     <div class="col">Actions</div>
 </div>
 
-<div class="row">
+<div class="row my-1">
     <div class="col">
         <input [(ngModel)]="newRound.golfTournament" type="text" class="form-control">
     </div>
@@ -17,7 +17,7 @@
 </div>
 
 
-<div *ngFor="let result of results" class="row">
+<div *ngFor="let result of results" class="row my-1">
     <div class="col">
         <input [(ngModel)]="result.golfTournament" type="text" class="form-control">
     </div>

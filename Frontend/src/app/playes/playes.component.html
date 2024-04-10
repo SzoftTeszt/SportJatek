@@ -7,9 +7,10 @@
 <div class="col mt-3">   
         
             <button (click)="player.visibleResult = !player.visibleResult" type="button" class="btn btn-primary btn-sm">Results</button>
-            <div class="col mt-2">
-                <app-results *ngIf="player.visibleResult" [results]="player.result" [playerId]="player.id" ></app-results>
-            </div>
+           
 </div>
+
+    <app-results *ngIf="player.visibleResult" [results]="player.result" [playerId]="player.id" ></app-results>
+
 
 </div>
